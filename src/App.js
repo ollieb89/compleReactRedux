@@ -57,7 +57,8 @@ class App extends Component {
 
   render() {
     const style = {
-      backgroundColor: 'white',
+      backgroundColor: 'green',
+      color: 'white',
       font: 'tahoma',
       border: '1px solid grey',
       padding: '8px',
@@ -91,12 +92,21 @@ class App extends Component {
             age={this.state.persons[2].age}/> */}
         </div> 
       );
+      style.backgroundColor = 'red';
+    }
+
+    const classes = [];
+    if (this.state.persons.length <= 2) {
+      classes.push('red'); // classes = ['red]
+    }
+    if (this.state.persons.length <= 1) {
+      classes.push('bold'); // classes = ['red', 'bold']
     }
 
     return (
       <div className="App">
         <h1>Hi, I'm a React App</h1>
-        <p>This is really working!</p>
+        <p className={classes.join(' ')}>This is really working!</p>
         <button
           className="btn" 
           style={style}
