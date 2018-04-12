@@ -97,7 +97,8 @@ class App extends Component {
       <div className="App">
         <h1>Hi, I'm a React App</h1>
         <p>This is really working!</p>
-        <button 
+        <button
+          className="btn" 
           style={style}
           // onClick={() => this.switchNameHandler('Olivier')}>Switch Name</button>
           onClick={this.togglePersonsHandler}>Toggle visibility</button>
