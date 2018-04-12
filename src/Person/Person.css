@@ -7,3 +7,14 @@
     text-align: center;
 }
 
+.btnClass {
+    border: 1px solid blue;
+    background-color: purple;
+    font: inherit;
+  }
+
+.Person button:hover {
+   background-color: red;
+   color: black;
+}
+  
